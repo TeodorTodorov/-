@@ -3,21 +3,11 @@
 (require rackunit/text-ui)
 
 ; Искаме да преброим колко цифри има дадено число. Ама итеративно.
-(define (count-digits-iter x)
-  (define (digitCounter x digNug)
-    (cond
-      ((= x 0)  digNug )
-      (else (digitCounter (floor(/ x 10)) (+ 1 digNug)) )
-          )
-    
-  
-  )
-  (digitCounter x 0 )
-  )
+
 (define tests
   (test-suite "Iterative count digits"
 
-     (test-case "" (check-equal? (count-digits-iter 0) 0))
+    (test-case "" (check-equal? (count-digits-iter 0) 0))
     (test-case "" (check-equal? (count-digits-iter 1) 1))
     (test-case "" (check-equal? (count-digits-iter 9) 1))
     (test-case "" (check-equal? (count-digits-iter 10) 2))

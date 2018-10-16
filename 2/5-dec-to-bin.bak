@@ -3,20 +3,6 @@
 (require rackunit/text-ui)
 
 ; Искаме да обърнем число от десетична в двоична бройна система
-(define (dec-to-bin x)
-  (define (decToBin x n )
-    (cond
-      ((= x 0) 0)
-      ((= x 1) (expt 10 n))
-      (else (+ (*(remainder x 2) (expt 10 n)) (decToBin (floor(/ x 2)) (+ n 1) )))
-
-      )
-
-    )
-
-  (decToBin x 0)
-
- )
 
 (define tests (test-suite
   "decimal to binary tests"

@@ -5,22 +5,6 @@
 ; Искаме да сумираме числа в даден интервал.
 ; Искаме два варианта - такъв, който генерира рекурсивен процес и такъв, който
 ; генерира итеративен.
-(define (sum-iter a b)
-  
-   (define(AtoBsum2 n j k)
-   (if(> n j) k ( AtoBsum2 (+ n 1) j (+ k n)))
-     )
-  
-  (AtoBsum2 a b 0)
-  )
-(define (sum-rec a b )
-
-  (if(= a b)
-     a
-      (+ a ( sum-rec(+ a 1 ) b))
-     )
- 
-  )
 
 (define tests (test-suite
   "Iterative sum"

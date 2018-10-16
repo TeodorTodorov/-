@@ -4,19 +4,6 @@
 
 ; Искаме да проверим дали дадено число е автоморфно.
 ; Едно число е автоморфно, ако квадратът му завършва на него.
-(define(automorphic? x)
-  (define xSquare (* x x))
-(define (areTheSame square q )
-  (cond
-    ((and (not(= q 0 )) (=(remainder square 10) (remainder q 10) ) )   (areTheSame (floor(/ square 10)) (floor(/ q 10)))   )
-    ((and(not(=(remainder square 10) (remainder q 10) )) (not(= q 0))) #f)
-    (else #t)
-    )
-  
-  )
-  (areTheSame xSquare x)
-  
-  )
 
 (define tests (test-suite
   "Automorphic tests"
