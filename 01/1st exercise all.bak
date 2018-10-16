@@ -1,0 +1,24 @@
+#lang racket
+
+(define (sum a b)
+  (+ a b)
+  )
+(sum 2 3)
+
+(define(isEven a)
+  (if(= (remainder a 2) 0) '(e f ) "ne")
+
+  )
+(isEven 6)
+
+(define (fact a)
+ ( if(= a 1) 1 (* a (fact (- a 1))))
+
+  )
+(fact 34)
+
+
+(define (AtoBsum a b k)
+  (if(= a b) (+ k b) ( AtoBsum (+ a 1) b (+ k a)))
+  )
+(AtoBsum 1 5 0)
