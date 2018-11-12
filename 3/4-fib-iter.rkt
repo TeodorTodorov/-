@@ -5,6 +5,21 @@
 ; Искаме да намерим n-тото число на Фибоначи.
 ; Искаме да го намерим и итеративно.
 
+(define (fib x)
+  (define (fib-iter x currentIteration fib oldFib)
+    (cond
+        ((= x 0) 0)
+      ((= x 1) 1)
+      ((= x currentIteration) oldFib)
+      (else (fib-iter x (+ currentIteration 1) ( + fib oldFib) fib ))
+        
+
+        )
+    )
+  (fib-iter x 0 1 0)
+
+  )
+
 (define tests (test-suite
   "Fiboacci tests"
 

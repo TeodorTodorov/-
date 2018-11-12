@@ -4,6 +4,35 @@
 
 ; Искаме да обърнем цифрите на дадено число.
 
+(define (my-reverse x)
+
+(define (digCount x)
+  (define (digits x n)
+    (if (= x 0)
+         n
+        (digits (floor (/ x 10)) (+ n 1))
+        
+        )
+
+    )
+  (digits x 0)
+  
+
+  )
+
+  
+  (define (reverse num iterationNumber )
+    (if(> iterationNumber 0)
+       (+(*(expt 10 iterationNumber) (remainder num 10) ) (reverse (floor(/ num 10)) (- iterationNumber 1)  ) )
+       (*(expt 10 iterationNumber) (remainder num 10) )
+
+       )
+    )
+  
+
+  (reverse x (- (digCount x) 1) )
+  )
+
 (define tests (test-suite
   "Reverse tests"
 
